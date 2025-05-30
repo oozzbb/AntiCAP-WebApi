@@ -37,12 +37,12 @@ python main.py
 ❗ 服务器部署打开6688端口
 
 ```
-Web主页:
+# Web主页:
 
 http://127.0.0.1:6688/
 http://localhost:6688/
 
-开发者文档：
+# 开发者文档：
 
 http://127.0.0.1:6688/docs
 http://localhost:6688/docs
