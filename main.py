@@ -47,10 +47,12 @@ async def ocr(data: ModelImageIn):
     result = Atc.OCR(data.img_base64)
     return {"result": result }
 
-@app.post("/math",summary="返回计算结果",tags=["算数识别"])
+@app.post("/math",summary="返回计算结果",tags=["计算识别"])
 async def math(data: ModelImageIn):
     result = Atc.Math(data.img_base64)
     return {"result": result }
+
+
 
 @app.post("/detection/icon",summary="检测图标,返回坐标",tags=["目标检测"])
 async def detection(data: ModelImageIn):
@@ -58,16 +60,20 @@ async def detection(data: ModelImageIn):
     return {"result": result }
 
 
-@app.post("/detection/icon/order",summary="按序返回图标的坐标",tags=["目标检测"])
-async def detection(data: ModelOrderImageIn):
-    result = Atc.ClickIcon_Order(order_img_base64=data.order_img_base64,target_img_base64=data.target_img_base64)
-    return {"result": result }
-
 
 @app.post("/detection/text",summary="按序文字,返回坐标",tags=["目标检测"])
 async def detection(data: ModelImageIn):
     result = Atc.Detection_Text(data.img_base64)
     return {"result": result}
+
+
+
+
+@app.post("/detection/icon/order",summary="按序返回图标的坐标",tags=["目标检测"])
+async def detection(data: ModelOrderImageIn):
+    result = Atc.ClickIcon_Order(order_img_base64=data.order_img_base64,target_img_base64=data.target_img_base64)
+    return {"result": result }
+
 
 @app.post("/detection/text/order",summary="按序返回文字的坐标",tags=["目标检测"])
 async def detection(data: ModelOrderImageIn):
@@ -91,11 +97,6 @@ if __name__ == '__main__':
         |    Description: 开箱即用 对抗复杂验证码.                    |
         -----------------------------------------------------------                           
 
-
-                    软件主页：http://127.0.0.1:6688
-                    开发文档：http://localhost:6688/docs
-
-                    代码编写：81NewArk
 
        ''')
 
