@@ -41,15 +41,17 @@ http://localhost:6688/docs
 ![](https://github.com/81NewArk/AntiCAP-WebApi/blob/main/Doc/DetText.jpg)
 
 
-请求:
+
 ```
+请求:
+
 {
   "img_base64": "图片的Base64编码"
 }
-```
+
 
 响应:
-```
+
 {
   "result": "jepv"
 }
@@ -63,14 +65,15 @@ http://localhost:6688/docs
 
 ![](https://github.com/81NewArk/AntiCAP-WebApi/blob/main/Doc/math.png)
 
-请求:
 ```
+请求:
+
 {
   "img_base64": "图片的Base64编码"
 }
-```
+
 响应:
-```
+
 {
   "result": "15"
 }
@@ -82,14 +85,16 @@ http://localhost:6688/docs
 
 ![](https://github.com/81NewArk/AntiCAP-WebApi/blob/main/Doc/DetText.jpg)
 
-请求:
+
 ```
+请求:
+
 {
   "img_base64": "图片的Base64编码"
 }
-```
+
 响应:
-```
+
 {
   "result": [
     {
@@ -122,17 +127,16 @@ http://localhost:6688/docs
 
 ![](https://github.com/81NewArk/AntiCAP-WebApi/blob/main/Doc/DetText_Order_Target.jpg)
 
-
-请求:
 ```
+请求:
+
 {
   "order_img_base64": "提示图base64",
   "target_img_base64": "目标图base64"
 }
-```
 
 响应:
-```
+
 {
   "result": [
     [
