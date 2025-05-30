@@ -25,8 +25,11 @@ python main.py
 
 
 # 开发者文档 
+
 http://127.0.0.1:6688/docs
+
 http://localhost:6688/docs
+
 # 服务器部署需要打开6688端口
 
 ```
