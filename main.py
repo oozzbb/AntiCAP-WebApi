@@ -89,7 +89,6 @@ async def detection(data: ModelOrderImageIn):
 
 if __name__ == '__main__':
     print('''
-
         -----------------------------------------------------------  
         |      _              _     _    ____      _      ____    |
         |     / \     _ __   | |_  (_)  / ___|    / \    |  _ \   |
@@ -101,8 +100,6 @@ if __name__ == '__main__':
         |         Author: 81NewArk                                |
         |    Description: 开箱即用 对抗复杂验证码.                    |
         -----------------------------------------------------------                           
-
-
        ''')
 
     uvicorn.run(app, host="0.0.0.0", port=6688, access_log=True)
