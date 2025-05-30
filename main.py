@@ -43,6 +43,9 @@ Atc = AntiCAP.AntiCAP(show_ad=False)
 
 
 
+@app.get("/",summary="index.html",tags=["主页"])
+async def read_root():
+    return FileResponse("static/index.html")
 
 @app.post("/ocr",summary="返回字符串",tags=["OCR识别"])
 async def ocr(data: ModelImageIn):
