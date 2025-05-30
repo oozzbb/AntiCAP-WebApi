@@ -38,7 +38,7 @@ http://localhost:6688/docs
 
 示例图片:
 
-![](\Doc\image.png)
+![](https://github.com/81NewArk/AntiCAP-WebApi/blob/main/Doc/DetText.jpg)
 
 
 请求:
@@ -61,7 +61,7 @@ http://localhost:6688/docs
 
 示例图片:
 
-![](\Doc\math.png)
+![](https://github.com/81NewArk/AntiCAP-WebApi/blob/main/Doc/math.png)
 
 请求:
 ```
@@ -80,7 +80,7 @@ http://localhost:6688/docs
 
 示例图片:
 
-![](\Doc\DetText.jpg)
+![](https://github.com/81NewArk/AntiCAP-WebApi/blob/main/Doc/DetText.jpg)
 
 请求:
 ```
@@ -108,18 +108,19 @@ http://localhost:6688/docs
 
 原图:
 
-![](\Doc\DetText_Order_Raw.jpg)
+![](https://github.com/81NewArk/AntiCAP-WebApi/blob/main/Doc/DetText_Order_Raw.jpg)
+
 
 需要自行裁剪
 
 提示图：
 
-![](\Doc\DetText_Order.jpg)
+![](https://github.com/81NewArk/AntiCAP-WebApi/blob/main/Doc/DetText_Order.jpg)
 
 
 目标图：
 
-![](\Doc\DetText_Order_Target.jpg)
+![](https://github.com/81NewArk/AntiCAP-WebApi/blob/main/Doc/DetText_Order_Target.jpg)
 
 
 请求:
