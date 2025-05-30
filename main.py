@@ -5,12 +5,10 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import FileResponse
-from starlette.staticfiles import StaticFiles
+
 
 description = """
-* 通过Http协议 跨语言调用AntiCAP 
-
-* Author：NewArk81
+* 通过Http协议 跨语言调用AntiCAP
 
 <img src="https://img.shields.io/badge/GitHub-ffffff"></a> <a href="https://github.com/81NewArk/AntiCAP"> <img src="https://img.shields.io/github/stars/81NewArk/AntiCAP?style=social"> <img src="https://badges.pufler.dev/visits/81NewArk/AntiCAP">
 
