@@ -4,6 +4,8 @@ import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.responses import FileResponse
+from starlette.staticfiles import StaticFiles
 
 description = """
 * 通过Http协议 跨语言调用AntiCAP 
