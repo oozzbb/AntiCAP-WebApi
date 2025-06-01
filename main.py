@@ -82,12 +82,12 @@ async def detection(data: ModelOrderImageIn):
     result = Atc.ClickText_Order(order_img_base64=data.order_img_base64,target_img_base64=data.target_img_base64)
     return {"result": result }
 
-@app.post("/Slider/Match",summary="缺口滑块,返回坐标",tags=["滑块验证码"])
+@app.post("/slider/match",summary="缺口滑块,返回坐标",tags=["滑块验证码"])
 async def slider_match(data: SliderImageIn):
     result = Atc.Slider_Match(target_base64=data.target_base64,background_base64=data.background_base64)
     return {"result": result }
 
-@app.post("/Slider/Comparison",summary="阴影滑块,返回坐标",tags=["滑块验证码"])
+@app.post("/slider/comparison",summary="阴影滑块,返回坐标",tags=["滑块验证码"])
 async def slider_comparison(data: SliderImageIn):
     result = Atc.Slider_Comparison(target_base64=data.target_base64,background_base64=data.background_base64)
     return {"result": result }
