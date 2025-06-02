@@ -57,60 +57,6 @@ http://localhost:6688/docs
 
 </div>
 
+## todo
 
-### 1. 🔠 通用OCR识别
-
-适用类型为数字、汉字、字母
-
-![image.png](https://img.picui.cn/free/2025/05/30/6839c849174f6.png)
-
-
-
-### 2. ➗计算类验证码识别
-
-适用类型为加减乘除运算
-
-![math.png](https://img.picui.cn/free/2025/05/30/6839ccef3f14d.png)
-
-
-
-### 3. 🎯图标侦测
-
-图标侦测 返回坐标
-
-![DetICO.png](https://img.picui.cn/free/2025/05/30/6839d08b04eaf.png)
-
-
-
-### 4. 🎯图标侦测 按序返回坐标
-
-
-提示图片：
-
-![tpis.png](https://img.picui.cn/free/2025/05/30/6839d3026e2f3.png)
-
-目标图片：
-
-![target.png](https://img.picui.cn/free/2025/05/30/6839d08b04eaf.png)
-
-
-
-### 5. 🔤文字侦测
-
-文字侦测 返回坐标
-
-![DetText.jpg](https://img.picui.cn/free/2025/05/30/6839d4771db7c.jpg)
-
-
-### 6. 🔤文字侦测 按序返回坐标
-
-不想写了
-
-### 7. 🧩缺口滑块
-
-不想写了
-
-### 8. 🏻阴影滑块
-
-不想写了
 
