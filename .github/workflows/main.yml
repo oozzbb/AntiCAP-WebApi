@@ -11,7 +11,7 @@ env:
   # github.repository as <account>/<repo>
   REPO: ${{ github.repository }} 
   ACTOR: ${{ github.actor }}
-  TAGS: AntiCAP-WebApi:latest
+  TAGS: anticap-webapi:latest
 
 jobs:
   docker:
