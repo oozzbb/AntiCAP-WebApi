@@ -9,25 +9,28 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+# FileResponse 不再需要，因为 StaticFiles 会自动处理 index.html
+# from fastapi.responses import FileResponse
 
-
-
+# --- 密钥和凭证等全局变量 ---
 SECRET_KEY = None
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 1*60*24*60
+ACCESS_TOKEN_EXPIRE_MINUTES = 1*60*24*60  # 60天
 VALID_USERNAME = None
 VALID_PASSWORD = None
 
 
-
+# --- FastAPI 应用描述 ---
 description = """
 * 通过Http协议 跨语言调用AntiCAP
 
-<img src="https://img.shields.io/badge/GitHub-ffffff"></a> <a href="https://github.com/81NewArk/AntiCAP"> <img src="https://img.shields.io/github/stars/81NewArk/AntiCAP?style=social"> <img src="https://badges.pufler.dev/visits/81NewArk/AntiCAP">
+<img src="https://img.shields.io/badge/GitHub-ffffff"></a> <a href="https://github.com/81NewArk/AntiCAP"> <img src="https://img.shields.io/github/stars/81NewArk/AntiCAP?style=social"> 
 
 """
 
+
 app = FastAPI(title="AntiCAP - WebApi", description=description, version="1.0.2")
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -37,11 +40,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-app.mount("/static", StaticFiles(directory="static", html=True), name="static")
-
-
-
+# --- 数据模型定义 ---
 class ModelImageIn(BaseModel):
     img_base64: str
 
@@ -58,10 +57,7 @@ class SliderImageIn(BaseModel):
 
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/login")
-
 Atc = AntiCAP.AntiCAP(show_ad=False)
-
-
 
 
 
@@ -100,6 +96,8 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
     return verify_token(token, credentials_exception)
 
 
+
+
 @app.post("/api/login", summary="登录获取JWT", tags=["公共"])
 async def login(form_data: OAuth2PasswordRequestForm = Depends()):
     if form_data.username != VALID_USERNAME or form_data.password != VALID_PASSWORD:
@@ -108,13 +106,11 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()):
             detail="Incorrect username or password",
             headers={"WWW-Authenticate": "Bearer"},
         )
-
     access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
     access_token = create_access_token(
         data={"sub": form_data.username},
         expires_delta=access_token_expires
     )
-
     return {
         "access_token": access_token,
         "token_type": "bearer"
@@ -162,6 +158,11 @@ async def slider_comparison(data: SliderImageIn, current_user: str = Depends(get
     return {"result": result }
 
 
+
+app.mount("/", StaticFiles(directory="static", html=True), name="static")
+
+
+
 if __name__ == '__main__':
     print('''
 -----------------------------------------------------------
@@ -175,12 +176,9 @@ if __name__ == '__main__':
 |         Author: 81NewArk                                |
 -----------------------------------------------------------''')
 
-
     VALID_USERNAME = input("Please enter username: ")
     VALID_PASSWORD = input("Please enter password: ")
 
-
     SECRET_KEY = os.urandom(32).hex()
-
 
     uvicorn.run(app, host="0.0.0.0", port=6688, access_log=True)
