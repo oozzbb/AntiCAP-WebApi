@@ -9,10 +9,8 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-# FileResponse 不再需要，因为 StaticFiles 会自动处理 index.html
-# from fastapi.responses import FileResponse
 
-# --- 密钥和凭证等全局变量 ---
+
 SECRET_KEY = None
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 1*60*24*60  # 60天
@@ -20,7 +18,7 @@ VALID_USERNAME = None
 VALID_PASSWORD = None
 
 
-# --- FastAPI 应用描述 ---
+
 description = """
 * 通过Http协议 跨语言调用AntiCAP
 
@@ -29,7 +27,7 @@ description = """
 """
 
 
-app = FastAPI(title="AntiCAP - WebApi", description=description, version="1.0.2")
+app = FastAPI(title="AntiCAP - WebApi", description=description, version="1.0.3")
 
 
 app.add_middleware(
