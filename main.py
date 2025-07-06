@@ -38,7 +38,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- 数据模型定义 ---
+
 class ModelImageIn(BaseModel):
     img_base64: str
 
