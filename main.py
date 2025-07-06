@@ -22,7 +22,7 @@ VALID_PASSWORD = None
 description = """
 * 通过Http协议 跨语言调用AntiCAP
 
-<img src="https://img.shields.io/badge/GitHub-ffffff"></a> <a href="https://github.com/81NewArk/AntiCAP"> <img src="https://img.shields.io/github/stars/81NewArk/AntiCAP?style=social"> 
+<img src="https://img.shields.io/badge/GitHub-ffffff"></a> <a href="https://github.com/81NewArk/AntiCAP-WebApi"> <img src="https://img.shields.io/github/stars/81NewArk/AntiCAP-WebApi?style=social"> 
 
 """
 
