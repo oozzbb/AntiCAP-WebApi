@@ -175,6 +175,7 @@ if __name__ == '__main__':
 -----------------------------------------------------------''')
 
     VALID_USERNAME = input("Please enter username: ")
+
     VALID_PASSWORD = input("Please enter password: ")
 
     SECRET_KEY = os.urandom(32).hex()
